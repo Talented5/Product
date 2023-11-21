@@ -27,7 +27,15 @@
                    SearchCommand="{Binding SearchPizzasCommand}"
                    SearchCommandParameter="{Binding Source={x:Reference searchBar},Path=Text}"
                    TextChanged="searchBar_TextChanged"/>
-
+        <SearchBar Grid.Row="1"
+           x:Name="XsearchBar"
+           Placeholder="Search for pizza..."
+           PlaceholderColor="Goldenrod"
+           CancelButtonColor="Red"
+           TextColor="DarkGoldenrod"
+           SearchCommand="{Binding SearchPizzasCommand}"
+           SearchCommandParameter="{Binding Source={x:Reference searchBar},Path=Text}"
+           TextChanged="searchBar_TextChanged"/>
         <ScrollView Grid.Row="1"
                     Margin="5">
             <VerticalStackLayout>
