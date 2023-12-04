@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Product.Pages.LoginPage"
+             BackgroundColor="Yellow"
+             Title="LoginPage">
+    <Grid>
+       
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame WidthRequest="500" HeightRequest="300" BackgroundColor="LightGoldenrodYellow">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label TextColor="Black" Text="Username:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        <Entry x:Name="Username" Margin="15,0,0,0" IsEnabled="True" BackgroundColor="White" WidthRequest="200" TextColor="Black" ></Entry>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,0">
+                        <Label TextColor="Black" Text=" Password: " HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        <Entry  x:Name="Password" Margin="15,0,0,0" IsEnabled="True" IsPassword="True" BackgroundColor="White" TextColor="Black" WidthRequest="200"></Entry>
+                    </HorizontalStackLayout>
+
+                    <Button x:Name="submit" Text="Submit here" Clicked="submit_Clicked" Margin="50,10,0,0" WidthRequest="75" TextColor="Black" Background="White"></Button>
+                    </VerticalStackLayout>
+            </Frame>
+
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
