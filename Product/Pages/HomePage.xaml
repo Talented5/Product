@@ -31,15 +31,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                         <Label Text="Grab this amazing offer before it expires "/>
 
                     </VerticalStackLayout>
-                    <Button Grid.Row="1"
-                            Grid.Column="0"
-                            Text="Get it now"
-                            BackgroundColor="PaleGoldenrod"
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            CornerRadius="22"
-                            HorizontalOptions="Center"
-                            Padding="50, 0"/>
+                   
                     <Image Grid.RowSpan="2" Grid.Column="1"
                            Source="p1.png"
                            HeightRequest="150"
