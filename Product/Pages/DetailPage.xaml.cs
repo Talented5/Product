@@ -38,4 +38,9 @@ public partial class DetailPage : ContentPage
             StatusBarStyle = StatusBarStyle.LightContent
         });
     }
+
+    private void sfBu_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+    }
 }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Product.Pages.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DarkGoldenrod">
+             BackgroundColor="Gold">
     <Grid RowDefinitions="Auto, *, Auto"
           Padding="15, 25">
         <Label Grid.Row="0"

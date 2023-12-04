@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-    
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:vm="clr-namespace:Product.ViewModels"
@@ -12,6 +13,7 @@
              >
     <ScrollView>
         <VerticalStackLayout Spacing="10">
+            <buttons:SfButton x:Name="BackButton" Clicked="BackButton_Clicked" Text="Go To Previous Page" Background="gold"/>
             <Border StrokeShape="RoundRectangle 10"
                     StrokeThickness="0"
                     BackgroundColor="Goldenrod"
@@ -59,7 +61,7 @@
 
             <BoxView HeightRequest="15"
                      Color="Transparent"/>
-            
+
 
             <Grid ColumnDefinitions="*, *">
                 <Label Grid.Column="0"
@@ -78,12 +80,12 @@
                     </Label.GestureRecognizers>
                 </Label>
             </Grid>
-            
+
 
             <FlexLayout BindableLayout.ItemsSource="{Binding Pizzas}"
                         Wrap="Wrap">
-                
-                
+
+
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="models:Pizza">
 
@@ -95,11 +97,11 @@
                                 Margin="2">
                             <Grid RowDefinitions="150, Auto, auto, Auto"
                                   RowSpacing="5">
-                                
-                            
 
 
-                            <Image Grid.Row="0"
+
+
+                                <Image Grid.Row="0"
                                          Source="{Binding Image}"
                                    HeightRequest="150"
                                    WidthRequest="130"/>
@@ -150,10 +152,10 @@
 
                         </Border>
                     </DataTemplate>
-                                  
-                </BindableLayout.ItemTemplate> 
+
+                </BindableLayout.ItemTemplate>
             </FlexLayout>
         </VerticalStackLayout>
     </ScrollView>
-   
+
 </ContentPage>

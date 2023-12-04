@@ -30,5 +30,8 @@ public partial class CheckoutPage : ContentPage
 
     }
 
-   
+    private void Gb_Clicked(object sender, EventArgs e)
+    {
+         Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+    }
 }
