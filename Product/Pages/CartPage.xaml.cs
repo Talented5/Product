@@ -17,11 +17,8 @@ public partial class CartPage : ContentPage
 
     }
 
-    
-
-    private void Backto_Clicked(object sender, EventArgs e)
+    private void Button_Clicked_1(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(OrderDetails));
-
+        Navigation.PushAsync(new OrderDetails());
     }
 }

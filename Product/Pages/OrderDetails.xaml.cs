@@ -11,6 +11,6 @@ public partial class OrderDetails : ContentPage
 
     private void sfButton_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync($"//{nameof(CheckoutPage)}");
+        Navigation.PushAsync(new CheckoutPage());
     }
 }

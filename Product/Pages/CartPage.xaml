@@ -15,8 +15,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
     </ContentPage.ToolbarItems>
 
     <VerticalStackLayout>
-        <buttons:SfButton x:Name="Backto" Text="Go To Previous" Clicked="Backto_Clicked" Background="gold"/>
-        <Grid>
+           <Grid>
             <ScrollView>
                 <VerticalStackLayout Padding="10">
 
@@ -139,13 +138,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                     </Label>
 
                     <Button Grid.Column="1"
-                        Text="Place Order"
-                        BackgroundColor="Goldenrod"
-                        CornerRadius="22"
-                        VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        Padding="25, 10"
-                        Command="{Binding PlaceOrderCommand}"/>
+                       Clicked="Button_Clicked_1" Text="Place the order" WidthRequest="100" Background="gold"/>
                 </Grid>
 
             </Border>
