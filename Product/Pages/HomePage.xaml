@@ -7,16 +7,21 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
              xmlns:vm="clr-namespace:Product.ViewModels"
              xmlns:models="clr-namespace:Product.Models"
              x:Class="Product.Pages.HomePage"
-             Title="Pizza World" BackgroundColor="White"
+             Title="Electronic World" BackgroundColor="White"
              Padding="15"
              x:DataType="vm:HomeViewModel"
              >
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Back" >
+            <MenuFlyoutItem Text="Back" Clicked="BackButton_Clicked"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
     <ScrollView>
         <VerticalStackLayout Spacing="10">
-            <buttons:SfButton x:Name="BackButton" Clicked="BackButton_Clicked" Text="Go To Previous Page" Background="gold"/>
+           
             <Border StrokeShape="RoundRectangle 10"
                     StrokeThickness="0"
-                    BackgroundColor="Goldenrod"
+                    BackgroundColor="LightBlue"
                     VerticalOptions="Start"
                     Padding="15">
                 <Grid ColumnDefinitions="*, 150"
@@ -31,9 +36,18 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                         <Label Text="Grab this amazing offer before it expires "/>
 
                     </VerticalStackLayout>
-                   
+                    <Button Grid.Row="1"
+                             Grid.Column="0"
+                             Text="Get it now"
+                             BackgroundColor="WhiteSmoke"
+                             TextColor="Black"
+                             FontAttributes="Bold"
+                             CornerRadius="22"
+                             HorizontalOptions="Center"
+                             Padding="50, 0"/>
+
                     <Image Grid.RowSpan="2" Grid.Column="1"
-                           Source="p1.png"
+                           Source="sh1.jpg"
                            HeightRequest="150"
                            WidthRequest="150"/>
 
@@ -41,9 +55,9 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
             </Border>
             <Border StrokeShape="RoundRectangle 22"
                     StrokeThickness="2"
-                    Stroke="Goldenrod">
+                    Stroke="LightBlue">
                 <Label Text="Search here..."
-                       TextColor="Goldenrod"
+                       TextColor="Black"
                        Padding="10, 14"/>
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToAllPizzasPageCommand }"
@@ -81,18 +95,14 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="models:Pizza">
 
-                        <Border FlexLayout.Basis="50%"
+                        <Border FlexLayout.Basis="25%"
                             StrokeShape="RoundRectangle 10"
                                 StrokeThickness="0"
-                                BackgroundColor="PaleGoldenrod"
+                                BackgroundColor="LightBlue"
                                 Padding="10"
                                 Margin="2">
                             <Grid RowDefinitions="150, Auto, auto, Auto"
                                   RowSpacing="5">
-
-
-
-
                                 <Image Grid.Row="0"
                                          Source="{Binding Image}"
                                    HeightRequest="150"
@@ -108,11 +118,11 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                            VerticalOptions="Center"
                                            FontAttributes="Bold"/>
                                     <HorizontalStackLayout        Grid.Column="1"
-                                                                                                          HorizontalOptions="End"
-                                                                                                                     Spacing="2"
-                                                                                                          VerticalOptions="Center">
+                                                                  HorizontalOptions="End"
+                                                                  Spacing="2"
+                                                                  VerticalOptions="Center">
 
-                                        <Label Text="4"/>
+                                        <Label Text="4.3"/>
                                         <Image Source="star.png"
                                                HeightRequest="15"
                                                WidthRequest="15">
@@ -125,7 +135,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                 </Grid>
                                 <Button Grid.Row="3"
                                             Text="View more"
-                                            BackgroundColor="Gold"
+                                            BackgroundColor="WhiteSmoke"
                                             TextColor="Black"
                                             CornerRadius="22"
                                             FontAttributes="Bold"

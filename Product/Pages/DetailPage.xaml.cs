@@ -26,7 +26,7 @@ public partial class DetailPage : ContentPage
 
     async void ImageButton_Clicked(object sender, EventArgs e)
     {
-		await Shell.Current.GoToAsync("..", animate: true);
+        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
 
     }
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
@@ -39,8 +39,5 @@ public partial class DetailPage : ContentPage
         });
     }
 
-    private void sfBu_Clicked(object sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync($"//{nameof(HomePage)}");
-    }
+   
 }

@@ -28,7 +28,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
     <Grid>
         <ScrollView Padding="15">
             <VerticalStackLayout Spacing="15">
-                <buttons:SfButton x:Name="sfBu" Text="Go to Previous" Background="gold" Clicked="sfBu_Clicked"/>
+               
                 <Image Source="{Binding Pizza.Image}"
                        HeightRequest="200"
                        WidthRequest="200"
@@ -48,12 +48,12 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                               Spacing="2"
                               VerticalOptions="Center">
 
-                        <Label Text="4"/>
+                        <Label Text="4.3"/>
                         <Image Source="star.png"
                                    HeightRequest="15"
                                    WidthRequest="15">
                             <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
+                                <toolkit:IconTintColorBehavior TintColor="Green"/>
                             </Image.Behaviors>
                         </Image>
 
@@ -67,21 +67,21 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 
                 <Label FontSize="14"
                        LineHeight="1.5"
-                         Text="This is some random description for this pizza,so that we can display this on the pizza details page, to design the UI.This is some random description for this pizza,so that we can display this on the pizza details page,to design the UI.This is some random description for this pizza,so that we can display this on the pizza details page, to design the UI"/>
+                         Text="This is some random description for this Product,so that we can display this on the Product details page, to design the UI.This is some random description for this Product,so that we can display this on the Product details page,to design the UI.This is some random description for this Product,so that we can display this on the Product details page, to design the UI"/>
 
 
             </VerticalStackLayout>
         </ScrollView>
         <Border StrokeThickness="0"
                 x:Name="Bottombox"
-                BackgroundColor="DarkGoldenrod"
+                BackgroundColor="LightBlue"
                 Margin="-1"
                 VerticalOptions="End"
                 HeightRequest="150"
                 Padding="15"
                 StrokeShape="{OnPlatform Android='RoundReactangle 30,30,0,0', Default='RoundRectangle 0'}">
             <Border.Shadow>
-                <Shadow Brush="Gold"
+                <Shadow Brush="LightBlue"
                         Radius="100"/>
             </Border.Shadow>
 
@@ -91,7 +91,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                        Grid.Column="0"
                        Text="{Binding Pizza.Amount, StringFormat='${0:N2}'}"
                        FontSize="20"
-                       TextColor="White"
+                       TextColor="Black"
                        FontAttributes="Bold"
                        VerticalOptions="Center"/>
                 <Grid Grid.Row="0"
@@ -104,12 +104,12 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding RemoveFromCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="Gold"/>
+                            <toolkit:IconTintColorBehavior TintColor="Red"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label Grid.Column="1"
                            Text="{Binding Pizza.CartQuantity}"
-                           TextColor="White"
+                           TextColor="Black"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            FontSize="25"/>
@@ -118,7 +118,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                          Style="{StaticResource QuantityBtn}"
                                  Command="{Binding AddToCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="Gold"/>
+                            <toolkit:IconTintColorBehavior TintColor="ForestGreen"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
                 </Grid>
@@ -126,7 +126,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                 <Button Grid.Row="1"
                             Grid.ColumnSpan="2"
                             Text="View Cart"
-                        BackgroundColor="Goldenrod"
+                        BackgroundColor="DarkBlue"
                         HorizontalOptions="Center"
                         CornerRadius="22"
                         Padding="80, 10"
@@ -142,11 +142,12 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
                      Margin="15"
+                     Padding="10"
                      HeightRequest="5"
                    
                      Clicked="ImageButton_Clicked">
             <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
+                <toolkit:IconTintColorBehavior TintColor="Black"/>
             </ImageButton.Behaviors>
         </ImageButton>
     </Grid>

@@ -9,7 +9,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
     <VerticalStackLayout VerticalOptions="Center"
                          HorizontalOptions="Center"
                          Spacing="25">
-        <buttons:SfButton x:Name="Gb" Text="Go to previous" Clicked="Gb_Clicked" Background="gold" WidthRequest="100" VerticalOptions="Start"/>
+        
         <Image x:Name="img"
             Source="check.png"
                HeightRequest="150"

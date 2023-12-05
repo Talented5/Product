@@ -21,4 +21,9 @@ public partial class CartPage : ContentPage
     {
         Navigation.PushAsync(new OrderDetails());
     }
+
+    private void MenuFlyoutItem_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+    }
 }

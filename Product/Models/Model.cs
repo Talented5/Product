@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syncfusion.Maui.DataForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,21 +16,59 @@ namespace Product.Models
     }
     public class Model
     {
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
-        public string Name { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "PhoneNumber should not be empty")]
-        [StringLength(10, ErrorMessage = "PhoneNumber should not exceed 10 digits")]
-        public string PhoneNumber { get; set; }
+        [Display(GroupName = "AddressDetails")]
+     //   [Display(Prompt = "Enter your first name", Name = "First name")]
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+        [Required(ErrorMessage = "Please enter your first name")]
+        [StringLength(20, ErrorMessage = "First name should not exceed 20 characters")]
+        public string FirstName { get; set; }
+        [Display(GroupName = "AddressDetails")]
+      //  [Display(Prompt = "Enter your last name", Name = "Last name")]
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+        [Required(ErrorMessage = "Please enter your last name")]
+        [StringLength(20, ErrorMessage = "First name should not exceed 20 characters")]
+        public string LastName { get; set; }
+        [Display(GroupName = "AddressDetails")]
+        [DataType(DataType.PhoneNumber)]
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+      //  [Display(Prompt = "Enter your number", Name = "Mobile number")]
+        [RegularExpression(@"^\(\d{3}\) \d{3}-\d{4}$", ErrorMessage = "Please enter a valid number")]
+        public string ContactNumber { get; set; }
+        [Display(GroupName = "AddressDetails")]
+      //  [Display(Prompt = "Enter your email", Name = "Email")]
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+        [EmailAddress(ErrorMessage = "Please enter your email")]
+        public string Email { get; set; }
+        [Display(GroupName = "AddressDetails")]
+       // [Display(Prompt = "Enter your password", Name = "Password")]
+        [DataType(DataType.Password)]
+        [DataFormDisplayOptions(ColumnSpan = 2, ValidMessage = "Password strength is good")]
+        [Required(ErrorMessage = "Please enter the password")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$", ErrorMessage = "A minimum 8-character password should contain a combination of uppercase and lowercase letters.")]
+        public string Password { get; set; }
+        [Display(GroupName = "AddressDetails")]
+      //  [Display(Prompt = "Confirm password", Name = "Re-enter Password")]
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Please enter the password")]
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+        public string RePassword { get; set; }
+
+        [Display(GroupName = "AddressDetails")]
         [DataType(DataType.MultilineText)]
+       // [Display(Prompt = "Enter your address", Name = "Address")]
+        [DataFormDisplayOptions(ColumnSpan = 2, RowSpan = 2)]
+        [Required(ErrorMessage = "Please enter your address")]
         public string Address { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "CityName should not be empty")]
-        public string City { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "RegionName should not be empty")]
-        public string Region { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "PostalCode should not be empty")]
-        public string PostalCode { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "CountryName should not be empty")]
+        [Display(GroupName = "AddressDetails")]
+       // [Display(Prompt = "Enter your country", Name = "Country")]
+        [Required(ErrorMessage = "Please select your country")]
         public string Country { get; set; }
+        [Display(GroupName = "AddressDetails")]
+       // [Display(Prompt = "Enter your City", Name = "City")]
+        [Required(ErrorMessage = "Please enter your City")]
+        public string City { get; set; }
+
+        [Display(GroupName = " Select the PaymentMethod")]
         public Billin Billing { get; set; }
     }
 
