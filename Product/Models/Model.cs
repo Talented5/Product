@@ -69,6 +69,7 @@ namespace Product.Models
         public string City { get; set; }
 
         [Display(GroupName = " Select the PaymentMethod")]
+        
         public Billin Billing { get; set; }
     }
 

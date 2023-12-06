@@ -76,8 +76,20 @@
             </VerticalStackLayout>
 
         </Frame>
+        <BoxView Grid.Row="2"  Color="LightBlue" />
+        <Image Grid.Row="2"
+                Margin="0,0,210,0"
+              Source="cr.png"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               WidthRequest="15"
+               HeightRequest="15"/>
+        <Label Grid.Row="2"
+               Text="GamanaEcommerce@2023"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               FontAttributes="Bold"/>
 
-     
     </Grid>
 
 </ContentPage>

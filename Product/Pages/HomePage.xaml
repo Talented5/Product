@@ -89,7 +89,8 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 
 
             <FlexLayout BindableLayout.ItemsSource="{Binding Pizzas}"
-                        Wrap="Wrap">
+                        Wrap="Wrap"
+                        >
 
 
                 <BindableLayout.ItemTemplate>
@@ -127,7 +128,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                                HeightRequest="15"
                                                WidthRequest="15">
                                             <Image.Behaviors>
-                                                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
+                                                <toolkit:IconTintColorBehavior TintColor="Green"/>
                                             </Image.Behaviors>
                                         </Image>
 
@@ -142,13 +143,17 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                             VerticalOptions="End"
                                             HorizontalOptions="Center"
                                             Padding="25, 0"
-                                        Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToDetailsPageCommand}" CommandParameter="{Binding .}"/>
+                                      
+                                       Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}},
+                                           Path=GoToCategoryPageCommand}" CommandParameter="{Binding .}"/>
+
                             </Grid>
                             <Border.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToDetailsPageCommand}" CommandParameter="{Binding .}"/>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}},
+                                        Path=GoToCategoryPageCommand}" CommandParameter="{Binding .}"/>
                             </Border.GestureRecognizers>
 
-
+                           
 
 
 
@@ -156,6 +161,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                     </DataTemplate>
 
                 </BindableLayout.ItemTemplate>
+              
             </FlexLayout>
         </VerticalStackLayout>
     </ScrollView>

@@ -78,7 +78,8 @@
                                         </Grid>
                                         <Border StrokeShape="RoundRectangle 25"
                                                 StrokeThickness="0"
-                                                BackgroundColor="YellowGreen"
+                                                BackgroundColor="Red"
+                                                
                                                 HeightRequest="45"
                                               HorizontalOptions="Center"
                                               Padding="30, 5"
@@ -97,7 +98,8 @@
 
                                         </HorizontalStackLayout>
                                         <Border.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:AllPizzaViewModel}}, Path=GoToDetailsPageCommand}" CommandParameter="{Binding .}"/>
+                                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:AllPizzaViewModel}}, 
+                                                        Path=GoToDetailsPageCommand}" CommandParameter="{Binding .}"/>
                                         </Border.GestureRecognizers>
 
                                         </Border>

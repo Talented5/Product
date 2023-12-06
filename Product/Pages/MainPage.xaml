@@ -20,7 +20,7 @@
                VerticalOptions="Center"
                HorizontalOptions="Center"/>
         <VerticalStackLayout Grid.Row="2"
-                             Spacing="15">
+                             Spacing="20">
             <Label Text="The Place of Global Electronics"
                    FontSize="40"
                    FontAttributes="Bold"/>
@@ -52,9 +52,26 @@
                            HeightRequest="30"/>
                 </HorizontalStackLayout>
             </Border>
-        </VerticalStackLayout> 
+        </VerticalStackLayout>
+
+      
+
     </Grid>
 
     
 
 </ContentPage>
+
+<!--<BoxView Grid.Row="3"  Color="Transparent" />
+<Image Grid.Row="3"
+  Margin="0,0,210,0"
+Source="cr.png"
+ HorizontalOptions="Center"
+ VerticalOptions="End"
+ WidthRequest="15"
+ HeightRequest="15"/>
+<Label Grid.Row="3"
+ Text="GamanaEcommerce@2023"
+ HorizontalOptions="Center"
+ VerticalOptions="End"
+ FontAttributes="Bold"/>-->

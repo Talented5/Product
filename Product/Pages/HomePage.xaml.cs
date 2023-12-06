@@ -14,4 +14,9 @@ public partial class HomePage : ContentPage
     {
 		Navigation.PushAsync(new MainPage());
     }
+
+    //private async void Button_Clicked(object sender, EventArgs e)
+    //{
+    //    await Shell.Current.GoToAsync($"//{nameof(MobilePage)}");
+    //}
 }
