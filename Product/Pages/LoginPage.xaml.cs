@@ -16,7 +16,7 @@ public partial class LoginPage : ContentPage
         username = ((Entry)this.FindByName("UsernameEntry")).Text;
 
         password = ((Entry)this.FindByName("PasswordEntry")).Text;
-        if (username == "Team" || password == "1210")
+        if (username == "Team" && password == "1210")
         {
             Navigation.PushAsync(new MainPage());
         }

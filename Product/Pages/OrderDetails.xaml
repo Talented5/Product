@@ -39,8 +39,14 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
                 
             </sf:SfDataForm>
         
-            <buttons:SfButton Grid.Row="1" x:Name="sfButton" Text="Save" WidthRequest="100" Clicked="sfButton_Clicked"/>
+            <buttons:SfButton Grid.Row="1" x:Name="sfButton"
+                              Text="Confirm" WidthRequest="100" 
+                              
+                              Clicked="sfButton_Clicked"/>
+            <BoxView Grid.Row="2"  Color="Transparent" />
+            
         </Grid>
+        
     </ContentPage.Content>
 
 </ContentPage>
