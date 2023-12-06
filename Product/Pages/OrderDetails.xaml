@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-xmlns:dataform="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:Product.ViewModels"
-             BackgroundColor="Gold"
+             BackgroundColor="WhiteSmoke"
              x:Class="Product.Pages.OrderDetails"
-             
              Title="OrderDetails">
 
     <ContentPage.BindingContext>
         <local:ViewModel></local:ViewModel>
     </ContentPage.BindingContext>
+    <ContentPage.Content>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+            <sf:SfDataForm
+                x:Name="DataForm"
+            Grid.Row="0"
+            DataObject="{Binding Model}"
+            LayoutType="TextInputLayout">
 
-    <VerticalStackLayout VerticalOptions="End" HorizontalOptions="End" >
-        <dataform:SfDataForm
-    DataObject="{Binding Model}"
-    LayoutType="TextInputLayout"
-            HeightRequest="600"
-            WidthRequest="200"
+                <sf:SfDataForm.Items>
+                    <sf:DataFormGroupItem Name="Payment Method">
+                        <sf:DataFormGroupItem.Items>
+                            <sf:DataFormComboBoxItem  FieldName="Billing"
+                                                      LayoutType="Default"
+                                                      ShowLeadingView="True">
+                                
+                            </sf:DataFormComboBoxItem>
+                        </sf:DataFormGroupItem.Items>
+                    </sf:DataFormGroupItem>
+                </sf:SfDataForm.Items>
+
+
+                
+            </sf:SfDataForm>
+        
+            <buttons:SfButton Grid.Row="1" x:Name="sfButton"
+                              Text="Confirm" WidthRequest="100" 
+                              
+                              Clicked="sfButton_Clicked"/>
+            <BoxView Grid.Row="2"  Color="Transparent" />
             
-            />
-
-        <buttons:SfButton x:Name="sfButton" Text="Click here to submit" WidthRequest="100" Clicked="sfButton_Clicked"/>
-    </VerticalStackLayout>
-
+        </Grid>
+        
+    </ContentPage.Content>
 
 </ContentPage>

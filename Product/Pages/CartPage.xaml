@@ -8,13 +8,17 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                xmlns:models="clr-namespace:Product.Models"
              Title="Cart"
              x:DataType="vm:CartViewModel"
-             BackgroundColor="PaleGoldenrod">
+             BackgroundColor="LightBlue">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear Cart"
                      Command="{Binding ClearCartCommand}"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Back" >
+            <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
 
-    <VerticalStackLayout>
            <Grid>
             <ScrollView>
                 <VerticalStackLayout Padding="10">
@@ -37,9 +41,9 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
              HorizontalTextAlignment="Center">
 
                                 </Label>
-                                <Button Text="Explore all pizzas"
+                                <Button Text="Explore all Items"
                                     HorizontalOptions="Center"
-                                    BackgroundColor="Goldenrod"
+                                    BackgroundColor="PaleTurquoise"
                                     Clicked="Button_Clicked"/>
                             </VerticalStackLayout>
 
@@ -48,10 +52,10 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="models:Pizza">
                                 <Border StrokeShape="RoundRectangle 15"
-                    StrokeThickness="0"
-                    BackgroundColor="White"
-                    Padding="10">
-                                    <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
+                                StrokeThickness="0"
+                                BackgroundColor="White"
+                                Padding="10">
+                                <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
                                         <Label Grid.Column="0"
                            Text="{Binding CartQuantity}"
                            VerticalOptions="Center"
@@ -113,7 +117,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                 </VerticalStackLayout>
             </ScrollView>
             <Border StrokeShape="RoundRectangle 40"
-                BackgroundColor="DarkGoldenrod"
+                BackgroundColor="DimGray"
                 StrokeThickness="0"
                 VerticalOptions="End"
                 Margin="5"
@@ -138,7 +142,13 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                     </Label>
 
                     <Button Grid.Column="1"
-                       Clicked="Button_Clicked_1" Text="Place the order" WidthRequest="100" Background="gold"/>
+                       Clicked="Button_Clicked_1" 
+                            Text="Place  order" 
+                             CornerRadius="22"
+                             VerticalOptions="Center"
+                             HorizontalOptions="End"
+                             Padding="25, 10"
+                            Background="Blue"/>
                 </Grid>
 
             </Border>
@@ -147,6 +157,6 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 
 
         </Grid>
-    </VerticalStackLayout>
+ 
 
 </ContentPage>

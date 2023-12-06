@@ -9,7 +9,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
     <VerticalStackLayout VerticalOptions="Center"
                          HorizontalOptions="Center"
                          Spacing="25">
-        <buttons:SfButton x:Name="Gb" Text="Go to previous" Clicked="Gb_Clicked" Background="gold" WidthRequest="100" VerticalOptions="Start"/>
+        
         <Image x:Name="img"
             Source="check.png"
                HeightRequest="150"
@@ -36,6 +36,23 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                 Clicked="homeBtn_Clicked"/>
 
 
-
+        <BoxView Grid.Row="2"  Color="LightBlue" />
+        <HorizontalStackLayout>
+        <Image Grid.Row="2"
+             Margin="0,120,10,0"
+           Source="cr.png"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            WidthRequest="15"
+            HeightRequest="15"/>
+        <Label
+            
+            Grid.Row="2"
+            Text="GamanaEcommerce@2023"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            FontAttributes="Bold"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
+   
 </ContentPage>
