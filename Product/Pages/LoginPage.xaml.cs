@@ -9,7 +9,7 @@ public partial class LoginPage : ContentPage
 
   
 
-    private void submit_Clicked(object sender, EventArgs e)
+    private async void submit_Clicked(object sender, EventArgs e)
     {
         string username, password;
 
@@ -18,11 +18,11 @@ public partial class LoginPage : ContentPage
         password = ((Entry)this.FindByName("PasswordEntry")).Text;
         if (username == "Team" && password == "1210")
         {
-            Navigation.PushAsync(new MainPage());
+            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
         }
         else
         {
-            DisplayAlert("Error", "Invalid Username or Password", "ok");
+             await DisplayAlert("Error", "Invalid Username or Password", "ok");
         }
 
     }

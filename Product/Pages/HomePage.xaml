@@ -12,9 +12,9 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
              x:DataType="vm:HomeViewModel"
              >
     <ContentPage.MenuBarItems>
-        <MenuBarItem Text="Back" >
+        <!--<MenuBarItem Text="Back" >
             <MenuFlyoutItem Text="Back" Clicked="BackButton_Clicked"/>
-        </MenuBarItem>
+        </MenuBarItem>-->
     </ContentPage.MenuBarItems>
     <ScrollView>
         <VerticalStackLayout Spacing="10">

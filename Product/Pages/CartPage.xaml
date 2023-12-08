@@ -14,8 +14,11 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                      Command="{Binding ClearCartCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.MenuBarItems>
-        <MenuBarItem Text="Back" >
-            <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
+
+
+
+       <MenuBarItem Text="Back" >
+        <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
         </MenuBarItem>
     </ContentPage.MenuBarItems>
 

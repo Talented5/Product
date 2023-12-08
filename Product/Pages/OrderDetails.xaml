@@ -11,6 +11,12 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
     <ContentPage.BindingContext>
         <local:ViewModel></local:ViewModel>
     </ContentPage.BindingContext>
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Back" >
+            <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
     <ContentPage.Content>
     <Grid>
         <Grid.RowDefinitions>
@@ -20,6 +26,7 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
             <sf:SfDataForm
                 x:Name="DataForm"
             Grid.Row="0"
+                WidthRequest="500"
             DataObject="{Binding Model}"
             LayoutType="TextInputLayout">
 
@@ -34,16 +41,19 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
                         </sf:DataFormGroupItem.Items>
                     </sf:DataFormGroupItem>
                 </sf:SfDataForm.Items>
-
-
                 
+                
+
+
             </sf:SfDataForm>
+        
+        
         
             <buttons:SfButton Grid.Row="1" x:Name="sfButton"
                               Text="Confirm" WidthRequest="100" 
-                              
-                              Clicked="sfButton_Clicked"/>
-            <BoxView Grid.Row="2"  Color="Transparent" />
+                              HeightRequest="50"
+                             Clicked="sfButton_Clicked"/>
+        
             
         </Grid>
         

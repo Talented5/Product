@@ -26,4 +26,9 @@ public partial class CartPage : ContentPage
     {
         Shell.Current.GoToAsync($"//{nameof(HomePage)}");
     }
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
