@@ -18,8 +18,8 @@ public partial class OrderDetails : ContentPage
            rm.ContactNumber != null &&
         rm.Email != null &&
           rm.Password != null &&
-           rm.Re_EnterPassword != null &&
-           rm.Password==rm.Re_EnterPassword &&
+           rm.ConformPassword != null &&
+           rm.Password==rm.ConformPassword &&
           rm.Address != null &&
             rm.Country != null &&
             rm.City != null)

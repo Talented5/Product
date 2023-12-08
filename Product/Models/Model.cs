@@ -33,7 +33,7 @@ namespace Product.Models
         [DataFormDisplayOptions(ColumnSpan = 2)]
       //  [Display(Prompt = "Enter your number", Name = "Mobile number")]
         [RegularExpression(@"^\(\d{3}\) \d{3}-\d{4}$", ErrorMessage = "Please enter a valid number")]
-        public string ContactNumber { get; set; }
+        public int ContactNumber { get; set; }
         [Display(GroupName = "AddressDetails")]
       //  [Display(Prompt = "Enter your email", Name = "Email")]
         [DataFormDisplayOptions(ColumnSpan = 2)]
@@ -51,7 +51,7 @@ namespace Product.Models
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Please enter the password")]
         [DataFormDisplayOptions(ColumnSpan = 2)]
-        public string RePassword { get; set; }
+        public string ConformPassword { get; set; }
 
         [Display(GroupName = "AddressDetails")]
         [DataType(DataType.MultilineText)]
