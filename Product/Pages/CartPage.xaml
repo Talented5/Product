@@ -146,7 +146,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 
                     <Button Grid.Column="1"
                        Clicked="Button_Clicked_1" 
-                            Text="Place  order" 
+                            Text="Place Order" 
                              CornerRadius="22"
                              VerticalOptions="Center"
                              HorizontalOptions="End"

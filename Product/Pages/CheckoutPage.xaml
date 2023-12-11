@@ -48,14 +48,20 @@ HeightRequest="5"
                TextColor="Green"
                Scale="0"/>
 
+                <Button x:Name="homeBtn"
+     Text="Go to home screen"
+        BackgroundColor="Green"
+        CornerRadius="22"
+        HorizontalOptions="Center"
+        Padding="50, 10"
+        Scale="0"
+        Opacity="0"
+       Clicked="sfButton_Clicked"/>
 
-        
 
 
 
-
-
-        <BoxView Color="LightBlue" />
+                <BoxView Color="LightBlue" />
         <HorizontalStackLayout>
             <Image Grid.Row="2"
              Margin="0,120,10,0"

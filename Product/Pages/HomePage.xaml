@@ -107,7 +107,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                 <Image Grid.Row="0"
                                          Source="{Binding Image}"
                                    HeightRequest="150"
-                                   WidthRequest="130"/>
+                                   WidthRequest="150"/>
                                 <Label Grid.Row="1"
                                    Text="{Binding Name}"
                                    HorizontalOptions="Center"

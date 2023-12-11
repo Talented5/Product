@@ -1,11 +1,11 @@
 namespace Product.Pages;
 
-public partial class CheckoutPage : ContentPage
+public partial class PaymentPage : ContentPage
 {
-    public CheckoutPage()
-    {
-        InitializeComponent();
-    }
+	public PaymentPage()
+	{
+		InitializeComponent();
+	}
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -24,13 +24,8 @@ public partial class CheckoutPage : ContentPage
         //await ImageButton.ScaleTo(1);
     }
 
-    private async void sfButton_Clicked(object sender, EventArgs e)
+    private void Button_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}", animate: true);
-    }
-
-    private async void ImageButton_Clicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}", animate: true);
+        Navigation.PushAsync(new CheckoutPage());
     }
 }

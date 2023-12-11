@@ -54,14 +54,13 @@ namespace Product.ViewModels
         [RelayCommand]
         private async Task ViewCart()
         {
-            if(Pizza.CartQuantity >0)
+            if(Pizza.CartQuantity >=1)
             {
                 await Shell.Current.GoToAsync(nameof(CartPage), animate: true);
             }
             else
             {
-                await Toast.Make("Please select the quantity using the plus (+)button", ToastDuration.Short)
-                    .Show();
+                await Shell.Current.DisplayAlert("Alert", "Please select the quantity using the plus (+)button", "Cancel");
 
 
             }
@@ -69,14 +68,13 @@ namespace Product.ViewModels
         [RelayCommand]
         private async Task BuyNow()
         {
-            if(Pizza.CartQuantity > 0)
+            if(Pizza.CartQuantity >=1)
             {
-                await Shell.Current.GoToAsync(nameof(CheckoutPage), animate: true);
+                await Shell.Current.GoToAsync(nameof(OrderDetails), animate: true);
             }
             else
             {
-                 await Toast.Make("Please select the quantity using the plus (+)button", ToastDuration.Short)
-                    .Show();
+                await Shell.Current.DisplayAlert("Alert", "Please select the quantity using the plus (+)button","Cancel");
             }
         }
         public void Dispose()

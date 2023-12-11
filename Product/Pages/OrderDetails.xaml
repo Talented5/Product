@@ -18,45 +18,50 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
     </ContentPage.MenuBarItems>
 
     <ContentPage.Content>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-            <sf:SfDataForm
+       
+            <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <sf:SfDataForm
                 x:Name="DataForm"
             Grid.Row="0"
                 WidthRequest="500"
             DataObject="{Binding Model}"
-            LayoutType="TextInputLayout">
+            LayoutType="TextInputLayout"/>
 
-                <sf:SfDataForm.Items>
-                    <sf:DataFormGroupItem Name="Payment Method">
-                        <sf:DataFormGroupItem.Items>
-                            <sf:DataFormComboBoxItem  FieldName="Billing"
-                                                      LayoutType="Default"
-                                                      ShowLeadingView="True">
-                                
-                            </sf:DataFormComboBoxItem>
-                        </sf:DataFormGroupItem.Items>
-                    </sf:DataFormGroupItem>
-                </sf:SfDataForm.Items>
-                
-                
-
-
-            </sf:SfDataForm>
-        
-        
-        
-            <buttons:SfButton Grid.Row="1" x:Name="sfButton"
-                              Text="Confirm" WidthRequest="100" 
+            </Grid>
+            <VerticalStackLayout Grid.Row="1">
+                <Label Text="Select the Paynemt Method:"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       Margin="0,0,200,0"
+                       FontSize="Subtitle"/>
+                <buttons:SfRadioButton Grid.Row="0" x:Name="sfButton"
+                              Text="PhonePay" WidthRequest="120" 
                               HeightRequest="50"
-                             Clicked="sfButton_Clicked"/>
+                             StateChanged="sfButton_StateChanged"/>
+                    <buttons:SfRadioButton Grid.Row="1" x:Name="sfButton1"
+                      Text="PayTM" WidthRequest="100" 
+                      HeightRequest="50"
+                         StateChanged="sfButton_StateChanged"   />
+                    <buttons:SfRadioButton Grid.Row="2" x:Name="sfButton2"
+                       Text="Gpay" WidthRequest="100" 
+                       HeightRequest="50"
+                         StateChanged="sfButton_StateChanged"   />
+                    <buttons:SfRadioButton Grid.Row="3" x:Name="sfButton3"
+                       Text="Cash On Delivery" WidthRequest="100" 
+                       HeightRequest="50"
+                  StateChanged="sfButton1_StateChanged"/>
+
+
+            </VerticalStackLayout>
+            </Grid>
+
         
-            
-        </Grid>
-        
+
     </ContentPage.Content>
 
 </ContentPage>
