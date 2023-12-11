@@ -18,45 +18,41 @@ xmlns:sf="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataFo
     </ContentPage.MenuBarItems>
 
     <ContentPage.Content>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-            <sf:SfDataForm
+
+
+        <VerticalStackLayout>
+        <sf:SfDataForm
                 x:Name="DataForm"
             Grid.Row="0"
                 WidthRequest="500"
             DataObject="{Binding Model}"
-            LayoutType="TextInputLayout">
+            LayoutType="TextInputLayout"/>
 
-                <sf:SfDataForm.Items>
-                    <sf:DataFormGroupItem Name="Payment Method">
-                        <sf:DataFormGroupItem.Items>
-                            <sf:DataFormComboBoxItem  FieldName="Billing"
-                                                      LayoutType="Default"
-                                                      ShowLeadingView="True">
-                                
-                            </sf:DataFormComboBoxItem>
-                        </sf:DataFormGroupItem.Items>
-                    </sf:DataFormGroupItem>
-                </sf:SfDataForm.Items>
-                
-                
+            <VerticalStackLayout>
+                <Grid RowDefinitions="auto,auto,auto,auto"></Grid>
+                <buttons:SfRadioButton Grid.Row="0" x:Name="cod" Text="Cash On Delivery" StateChanged="cod_StateChanged_1"></buttons:SfRadioButton>
+                <buttons:SfRadioButton Grid.Row="1" x:Name="GPay" Text="Google Pay" StateChanged="GPay_StateChanged"></buttons:SfRadioButton>
+                <buttons:SfRadioButton Grid.Row="2" x:Name="Paytm" Text="Paytm" StateChanged="Paytm_StateChanged"></buttons:SfRadioButton>
+                <buttons:SfRadioButton Grid.Row="3" x:Name="Phonepe" Text="Phonepe" StateChanged="Phonepe_StateChanged"></buttons:SfRadioButton>
+            </VerticalStackLayout>
 
 
-            </sf:SfDataForm>
-        
-        
-        
-            <buttons:SfButton Grid.Row="1" x:Name="sfButton"
-                              Text="Confirm" WidthRequest="100" 
-                              HeightRequest="50"
-                             Clicked="sfButton_Clicked"/>
-        
-            
-        </Grid>
-        
+
+        </VerticalStackLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </ContentPage.Content>
 
 </ContentPage>
