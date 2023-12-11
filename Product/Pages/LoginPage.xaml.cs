@@ -18,7 +18,7 @@ public partial class LoginPage : ContentPage
         password = ((Entry)this.FindByName("PasswordEntry")).Text;
         if (username == "Team" && password == "1210")
         {
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            await Navigation.PushAsync(new OrderDetails());
         }
         else
         {
