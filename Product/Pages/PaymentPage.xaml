@@ -36,5 +36,23 @@
                 Padding="20,10"
                 CornerRadius="22"
             Clicked="Button_Clicked"/>
+        <BoxView Color="LightBlue" />
+        <HorizontalStackLayout>
+            <Image Grid.Row="2"
+  Margin="0,120,10,0"
+Source="cr.png"
+ HorizontalOptions="Center"
+ VerticalOptions="End"
+ WidthRequest="15"
+ HeightRequest="15"/>
+            <Label          
+ Text="GamanaEcommerce@2023"
+ HorizontalOptions="Center"
+ Margin="0,50,0,0"
+ VerticalOptions="End"
+ FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
+   
 </ContentPage>

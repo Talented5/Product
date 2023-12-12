@@ -177,6 +177,8 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                         VerticalOptions="End"
                         Margin="0, 70,0,0"
                         Command="{Binding BuyNowCommand}"/>
+                
+                
 
             </Grid>
                        

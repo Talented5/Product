@@ -67,8 +67,12 @@
                     <Label Text="Don't have account?" VerticalTextAlignment="Center"/>
                     <Label Text="REGISTER" FontSize="18" 
                                FontAttributes="Bold"
-                           TextColor="{x:StaticResource Primary}"/>
-                    
+                           TextColor="{x:StaticResource Primary}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
                 </HorizontalStackLayout>
 
 

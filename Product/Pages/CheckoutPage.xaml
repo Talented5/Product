@@ -70,12 +70,10 @@ HeightRequest="5"
             VerticalOptions="End"
             WidthRequest="15"
             HeightRequest="15"/> 
-            <Label
-            
-            
+            <Label          
             Text="GamanaEcommerce@2023"
             HorizontalOptions="Center"
-                Margin="0,50,0,0"
+            Margin="0,50,0,0"
             VerticalOptions="End"
             FontAttributes="Bold"/>
         </HorizontalStackLayout>

@@ -26,4 +26,9 @@ public partial class LoginPage : ContentPage
         }
 
     }
+
+    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+
+    }
 }
