@@ -1,9 +1,9 @@
 namespace Product.Pages;
 
-public partial class AllPizzasPage : ContentPage
+public partial class AllItemsPage : ContentPage
 {
-	private readonly AllPizzaViewModel _allPizzaViewModel;
-	public AllPizzasPage(AllPizzaViewModel allPizzaViewModel)
+	private readonly AllItemViewModel _allPizzaViewModel;
+	public AllItemsPage(AllItemViewModel allPizzaViewModel)
 	{
 		_allPizzaViewModel = allPizzaViewModel;
 		InitializeComponent();

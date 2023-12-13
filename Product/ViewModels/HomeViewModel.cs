@@ -8,43 +8,38 @@ namespace Product.ViewModels
 {
     public partial class HomeViewModel : ObservableObject
     {
-        private readonly PizzaService _pizzaService;
-        public HomeViewModel(PizzaService pizzaService)
+        private readonly ItemService _itemService;
+        public HomeViewModel(ItemService itemService)
         {
-            _pizzaService = pizzaService;
-            Pizzas = new(_pizzaService.GetPopularPizzas());
+            _itemService = itemService;
+            Items = new(_itemService.GetPopularPizzas());
         }
-        public ObservableCollection<Pizza> Pizzas { get; set; }
+        public ObservableCollection<Item> Items { get; set; }
         [RelayCommand]
-        private async Task GoToAllPizzasPage(bool fromSearch = false)
+        private async Task GoToAllItemsPage(bool fromSearch = true)
         {
             var parameters = new Dictionary<string, object>
             {
-                [nameof(AllPizzaViewModel.FromSearch)] = fromSearch
+                [nameof(AllItemViewModel.FromSearch)] = fromSearch
 
 
             };
-            await Shell.Current.GoToAsync(nameof(AllPizzasPage), animate : true,parameters);
+            await Shell.Current.GoToAsync(nameof(AllItemsPage), animate : true,parameters);
         }
-        //[RelayCommand]
-        //private async Task GoToDetailsPage(Pizza pizza)
-        //{
-        //    var parameters = new Dictionary<string, object>
-        //    {
-        //        [nameof(DetailsViewModel.Pizza)] = pizza
-
-
-        //    };
-        //    await Shell.Current.GoToAsync(nameof(DetailPage), animate: true, parameters);
-        //}
-        //[RelayCommand]
-        //private async Task GoToMobilePage(Pizza mobile)
-        //{
-        //    await Shell.Current.GoToAsync(nameof(MobilePage), animate: true);
-
-        //}
         [RelayCommand]
-        private async Task GoToCategoryPage(Pizza pizza)
+        private async Task GoToMobilePage(bool fromSearch = false)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                [nameof(AllItemViewModel.FromSearch)] = fromSearch
+
+
+            };
+            await Shell.Current.GoToAsync(nameof(MobilePage), animate: true, parameters);
+        }
+        
+        [RelayCommand]
+        private async Task GoToCategoryPage(Item pizza)
         {
           
 

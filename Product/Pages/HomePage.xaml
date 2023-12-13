@@ -60,8 +60,8 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                        TextColor="Black"
                        Padding="10, 14"/>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToAllPizzasPageCommand }"
-                                          CommandParameter="{x:Boolean true}"/>
+                    <TapGestureRecognizer Command="{Binding GoToAllItemsPageCommand }"
+                                          CommandParameter="{x:Boolean false}"/>
                 </Border.GestureRecognizers>
             </Border>
 
@@ -81,20 +81,20 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                        VerticalOptions="End"
                        TextDecorations="Underline">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GoToAllPizzasPageCommand }"
+                        <TapGestureRecognizer Command="{Binding GoToMobilePageCommand }"
                       CommandParameter="{x:Boolean false}"/>
                     </Label.GestureRecognizers>
                 </Label>
             </Grid>
 
 
-            <FlexLayout BindableLayout.ItemsSource="{Binding Pizzas}"
+            <FlexLayout BindableLayout.ItemsSource="{Binding Items}"
                         Wrap="Wrap"
                         >
 
 
                 <BindableLayout.ItemTemplate>
-                    <DataTemplate x:DataType="models:Pizza">
+                    <DataTemplate x:DataType="models:Item">
 
                         <Border FlexLayout.Basis="25%"
                             StrokeShape="RoundRectangle 10"

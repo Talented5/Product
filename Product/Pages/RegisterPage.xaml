@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Product.Pages.RegisterPage"
+             Title="RegisterPage">
+    <Grid RowDefinitions="1*,8*,1*">
+
+        <Frame BackgroundColor="WhiteSmoke" 
+            Grid.Row="0"
+            HorizontalOptions="EndAndExpand"
+            Padding="0"
+            Margin="0,-80,-80,0"
+            HeightRequest="250"
+            WidthRequest="250"
+            CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" 
+     Grid.Row="0"
+     HorizontalOptions="EndAndExpand"
+     Padding="0"
+     Margin="0,-120,-120,0"
+     HeightRequest="250"
+     WidthRequest="250"
+     CornerRadius="125">
+
+        </Frame>
+
+        <Frame 
+            Grid.Row="1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="0,0,40,0"
+         WidthRequest="550"
+         HeightRequest="600">
+            <VerticalStackLayout Spacing="25">
+                <Label Text=" Registration Form" FontSize="28" FontAttributes="Bold" />
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="user.png" HeightRequest="25" WidthRequest="45" />
+                        <Entry x:Name="FullNameEntry"  VerticalOptions="Center" Placeholder="FullName" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image  VerticalOptions="Center" Source="us.png" HeightRequest="25" WidthRequest="45" />
+                        <Entry x:Name="LastNameEntry" VerticalOptions="Center" Placeholder="LastName"  Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image  VerticalOptions="Center" Source="cl.png" HeightRequest="25" WidthRequest="45" />
+                        <Entry x:Name="ContactNumberEntry" VerticalOptions="Center" Placeholder="ContactNumber" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image  VerticalOptions="Center" Source="em.png" HeightRequest="25" WidthRequest="45" />
+                        <Entry x:Name="EmailEntry" VerticalOptions="Center" Placeholder="Email" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image  VerticalOptions="Center" Source="pss.png" HeightRequest="25" WidthRequest="45" />
+                        <Entry x:Name="PasswordEntry" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+                <Button
+                Text="SignIn" 
+             Clicked="Button_Clicked"
+                    
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="20"
+               Margin="0,10,0,0"
+               WidthRequest="200"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+    </Grid>
+</ContentPage>

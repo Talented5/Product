@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 namespace Product.ViewModels
 {
     [QueryProperty(nameof(FromSearch), nameof(FromSearch))]
-    public partial class AllPizzaViewModel : ObservableObject
+    public partial class AllItemViewModel : ObservableObject
     {
-        private readonly PizzaService _pizzaService;
-            public AllPizzaViewModel(PizzaService pizzaService)
+        private readonly ItemService _itemService;
+            public AllItemViewModel(ItemService itemService)
         { 
-            _pizzaService = pizzaService;
-            Pizzas = new(_pizzaService.GetallPizzas());
+            _itemService = itemService;
+            Items = new(_itemService.GetallPizzas());
         }
-        public ObservableCollection<Pizza> Pizzas { get; set; }
+        public ObservableCollection<Item> Items { get; set; }
 
         [ObservableProperty]
         private bool _fromSearch;
@@ -29,19 +29,19 @@ namespace Product.ViewModels
         [RelayCommand]
         private async Task SearchPizzas(string searchTerm)
         {
-            Pizzas.Clear();
+            Items.Clear();
             Searching = true;
             await Task.Delay(1000);
-            foreach (var pizza in _pizzaService.SearchPizzas(searchTerm))
+            foreach (var pizza in _itemService.SearchPizzas(searchTerm))
             {
-                Pizzas.Add(pizza);
+                Items.Add(pizza);
 
             }
             Searching = false;
 
         }
         [RelayCommand]
-        private async Task GoToDetailsPage(Pizza pizza)
+        private async Task GoToDetailsPage(Item pizza)
         {
             var parameters = new Dictionary<string, object>
             {

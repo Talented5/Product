@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Product.Models
 {
-    public partial class Pizza : ObservableObject
+    public partial class Item : ObservableObject
     {
         public string Name { get; set; }
         public string Image {  get; set; }
@@ -18,7 +18,7 @@ namespace Product.Models
         private int _cartQuantity;
 
         public double Amount => CartQuantity * Price;
-        public Pizza Clone() => MemberwiseClone() as Pizza;
+        public Item Clone() => MemberwiseClone() as Item;
 
     }
 }

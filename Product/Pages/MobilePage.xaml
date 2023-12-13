@@ -37,7 +37,7 @@
 
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Pizza">
+                        <DataTemplate x:DataType="models:Item">
                             <Border StrokeShape="RoundRectangle 10"
                                     StrokeThickness="0"
                                     BackgroundColor="LightBlue"

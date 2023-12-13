@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Product.Pages.LoginPage"
              BackgroundColor="LightBlue"
-             Title="LoginPage">
+             Title="LoginPage"
+             BackgroundImageSource="electronic.png">
 
     <Grid RowDefinitions="1*,8*,1*">
 
@@ -80,7 +81,7 @@
             </VerticalStackLayout>
 
         </Frame>
-        <BoxView Grid.Row="2"  Color="LightBlue" />
+        <BoxView Grid.Row="2"  Color="Transparent" />
         <Image Grid.Row="2"
                 Margin="0,0,210,0"
               Source="cr.png"
@@ -89,6 +90,7 @@
                WidthRequest="15"
                HeightRequest="15"/>
         <Label Grid.Row="2"
+               TextColor="WhiteSmoke"
                Text="GamanaEcommerce@2023"
                HorizontalOptions="Center"
                VerticalOptions="End"

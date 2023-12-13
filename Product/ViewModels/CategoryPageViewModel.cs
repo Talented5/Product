@@ -13,6 +13,6 @@ namespace Product.ViewModels
         {
         }
         [ObservableProperty]
-        private Pizza _pizza;
+        private Item _pizza;
     }
 }

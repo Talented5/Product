@@ -32,13 +32,13 @@ namespace Product
         }
         private static IServiceCollection AddPizzaServices(IServiceCollection services) 
         {
-            services.AddSingleton<PizzaService>();
+            services.AddSingleton<ItemService>();
             services.AddSingleton<MobileService>();
             services.AddSingleton<HomePage>()
                      .TryAddSingleton<HomeViewModel>();
             services.AddSingletonWithShellRoute<HomePage,
                HomeViewModel>(nameof(HomePage));
-            services.AddTransientWithShellRoute<AllPizzasPage,AllPizzaViewModel>(nameof(AllPizzasPage));
+            services.AddTransientWithShellRoute<AllItemsPage,AllItemViewModel>(nameof(AllItemsPage));
             services.AddTransientWithShellRoute<DetailPage, DetailsViewModel>(nameof(DetailPage));
             services.AddTransientWithShellRoute<MobilePage, MobilePageViewModel>(nameof(MobilePage));
             services.AddSingleton<CartViewModel>();

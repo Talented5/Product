@@ -12,13 +12,16 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                          Spacing="25">
 
 
-        <ImageButton Grid.Row="0" Source="{OnPlatform Android='right_arrow', Default='back.png'}"
-VerticalOptions="Start"
-HorizontalOptions="Start"
-Margin="0,0,1200,0"
-Padding="10"
-HeightRequest="5"
-             
+        <Button Grid.Row="0" 
+                    Text="Home"
+                FontAttributes="Bold"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Start"
+                        Margin="0,0,1200,0"
+                        Padding="10"
+                        HeightRequest="25"
+                        Background="Transparent"
+                TextColor="Black"
          Clicked="ImageButton_Clicked"/>
 
         <BoxView></BoxView>
@@ -62,7 +65,9 @@ HeightRequest="5"
 
 
                 <BoxView Color="LightBlue" />
-        <HorizontalStackLayout>
+        <HorizontalStackLayout VerticalOptions="End"
+                               HorizontalOptions="Center"
+                               Margin="0,100,0,0">
             <Image Grid.Row="2"
              Margin="0,120,10,0"
            Source="cr.png"

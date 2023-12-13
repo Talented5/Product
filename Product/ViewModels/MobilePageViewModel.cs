@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Product.ViewModels
 {
-    [QueryProperty(nameof(Pizza), nameof(Pizza))]
+    [QueryProperty(nameof(Item), nameof(Item))]
     public partial  class MobilePageViewModel : ObservableObject
     {
         private readonly MobileService _mobileService;
@@ -16,7 +16,7 @@ namespace Product.ViewModels
             _mobileService = mobileService;
             Mobile = new(_mobileService.GetallMobiles());
         }
-        public ObservableCollection<Pizza> Mobile{ get; set; }
+        public ObservableCollection<Item> Mobile{ get; set; }
 
         [ObservableProperty]
         private bool _fromSearch;
@@ -39,7 +39,7 @@ namespace Product.ViewModels
 
         }
         [RelayCommand]
-        private async Task GoToDetailsPage(Pizza mobile)
+        private async Task GoToDetailsPage(Item mobile)
         {
             var parameters = new Dictionary<string, object>
             {

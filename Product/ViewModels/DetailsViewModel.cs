@@ -24,9 +24,9 @@ namespace Product.ViewModels
         }
 
         private void OnCartCleared(object? sender, EventArgs e) => Pizza.CartQuantity = 0;
-        private void OnCartItemRemoved(object? sender, Pizza p) => OnCartItemChanged(p, 0);
-        private void OnCartItemUpdated(object? _, Pizza p) => OnCartItemChanged(p, p.CartQuantity);
-        private void OnCartItemChanged(Pizza p, int quantity)
+        private void OnCartItemRemoved(object? sender, Item p) => OnCartItemChanged(p, 0);
+        private void OnCartItemUpdated(object? _, Item p) => OnCartItemChanged(p, p.CartQuantity);
+        private void OnCartItemChanged(Item p, int quantity)
         {
             if(p.Name == Pizza.Name)
             {
@@ -35,7 +35,7 @@ namespace Product.ViewModels
         }
         
         [ObservableProperty]
-        private Pizza _pizza;
+        private Item _pizza;
         [RelayCommand]
         private void AddToCart()
         {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:Class="Product.Pages.PaymentSelectionPage"
+             Title="PaymentSelectionPage"
+             BackgroundImageSource="bs.png">
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Back" >
+            <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+
+    <Frame     VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,0,40,0">
+        <VerticalStackLayout >
+            <Label Text="Select the Paynemt Method:"
+           HorizontalOptions="Center"
+           FontAttributes="Bold"
+           Margin="0,0,200,0"
+           FontSize="Subtitle"/>
+            <buttons:SfRadioButton Grid.Row="0" x:Name="sfButton"
+                  Text="PhonePay" WidthRequest="120" 
+                  HeightRequest="50"
+                StateChanged="sfButton_StateChanged"/>
+            <buttons:SfRadioButton Grid.Row="1" x:Name="sfButton1"
+          Text="PayTM" WidthRequest="100" 
+          HeightRequest="50"
+             StateChanged="sfButton_StateChanged"   />
+            <buttons:SfRadioButton Grid.Row="2" x:Name="sfButton2"
+           Text="Gpay" WidthRequest="100" 
+           HeightRequest="50"
+            StateChanged="sfButton_StateChanged"  />
+            <buttons:SfRadioButton Grid.Row="3" x:Name="sfButton3"
+           Text="Cash On Delivery" WidthRequest="100" 
+           HeightRequest="50"
+     StateChanged="sfButton3_StateChanged"
+                               />
+
+
+        </VerticalStackLayout>
+    </Frame>
+
+</ContentPage>

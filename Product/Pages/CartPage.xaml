@@ -14,9 +14,6 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                      Command="{Binding ClearCartCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.MenuBarItems>
-
-
-
        <MenuBarItem Text="Back" >
         <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
         </MenuBarItem>
@@ -25,7 +22,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
            <Grid>
             <ScrollView>
                 <VerticalStackLayout Padding="10">
-
+                <Grid RowDefinitions="*,400" Grid.Row="0">
                     <CollectionView ItemsSource="{Binding Items}">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Vertical"
@@ -53,12 +50,12 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                         </CollectionView.EmptyView>
 
                         <CollectionView.ItemTemplate>
-                            <DataTemplate x:DataType="models:Pizza">
+                            <DataTemplate x:DataType="models:Item">
                                 <Border StrokeShape="RoundRectangle 15"
                                 StrokeThickness="0"
                                 BackgroundColor="White"
                                 Padding="10">
-                                <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
+                                    <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
                                         <Label Grid.Column="0"
                            Text="{Binding CartQuantity}"
                            VerticalOptions="Center"
@@ -105,19 +102,28 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                                                 <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=RemoveCartItemCommand}"
                                                                   CommandParameter="{Binding Name}"/>
                                             </Image.GestureRecognizers>
-
                                         </Image>
-
                                     </Grid>
-
                                 </Border>
-
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
+          
+           
+                    <CarouselView Grid.Row="1" ItemsSource="{Binding Items}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Item">
 
+                            <Image Source="{Binding Image }"></Image>
 
-                </VerticalStackLayout>
+                        </DataTemplate>
+
+                    </CarouselView.ItemTemplate>
+
+                </CarouselView>
+                </Grid>
+
+            </VerticalStackLayout>
             </ScrollView>
             <Border StrokeShape="RoundRectangle 40"
                 BackgroundColor="DimGray"

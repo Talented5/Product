@@ -8,17 +8,17 @@ namespace Product.ViewModels
 {
     public partial class CartViewModel : ObservableObject
     {
-        public event EventHandler<Pizza> CartItemRemoved;
-        public event EventHandler<Pizza> CartItemUpdated;
+        public event EventHandler<Item> CartItemRemoved;
+        public event EventHandler<Item> CartItemUpdated;
         public event EventHandler CartCleared;
 
-        public ObservableCollection<Pizza> Items { get; set; } = new();
+        public ObservableCollection<Item> Items { get; set; } = new();
 
         [ObservableProperty]
         private double _totalAmount;
         private void RecalculateTotalAmount() => TotalAmount = Items.Sum(i => i.Amount);
         [RelayCommand]
-        private void UpdateCartItem(Pizza pizza)
+        private void UpdateCartItem(Item pizza)
         {
             var item = Items.FirstOrDefault(i => i.Name == pizza.Name);
             if (item is not null)

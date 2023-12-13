@@ -31,8 +31,10 @@ namespace Product.Models
         [Display(GroupName ="ContactDetails")]
         //[DataType(DataType.PhoneNumber)]
         [DataFormDisplayOptions(ColumnSpan = 2)]
-      //  [Display(Prompt = "Enter your number", Name = "Mobile number")]
-        [RegularExpression(@"^\(\d{3}\) \d{3}-\d{4}$", ErrorMessage = "Please enter a valid number")]
+        //  [Display(Prompt = "Enter your number", Name = "Mobile number")]
+        //[RegularExpression(@"^\(\d{3}\) \d{3}-\d{4}$", ErrorMessage = "Please enter a valid number")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "PhoneNumber should not be empty")]
+        [StringLength(10, ErrorMessage = "PhoneNumber should not exceed 10 digits")]
         public string ContactNumber { get; set; }
         [Display(GroupName = "ContactDetails")]
       //  [Display(Prompt = "Enter your email", Name = "Email")]
@@ -51,6 +53,7 @@ namespace Product.Models
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Please enter the password")]
         [DataFormDisplayOptions(ColumnSpan = 2)]
+        [Compare(nameof(Password),ErrorMessage ="Password Doesn't Match ")]
         public string ConformPassword { get; set; }
 
         [Display(GroupName = "AddressDetails")]

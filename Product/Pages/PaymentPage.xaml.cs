@@ -28,4 +28,9 @@ public partial class PaymentPage : ContentPage
     {
         Navigation.PushAsync(new CheckoutPage());
     }
+
+    private void MenuFlyoutItem_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new PaymentSelectionPage());
+    }
 }

@@ -2,65 +2,65 @@
 
 namespace Product.Services
 {
-    public class PizzaService
+    public class ItemService
     {
-        private readonly static IEnumerable<Pizza> _pizzas = new
-            List<Pizza>()
+        private readonly static IEnumerable<Item> _pizzas = new
+            List<Item>()
         {
-            new Pizza
+            new Item
             {
                 Name = "Laptops",
                 Image = "lappy.jpg",
                 Price = 1025.1
             },
-            new Pizza
+            new Item
             {
                 Name = "Telivisions",
                 Image = "tv.jpg",
                 Price = 766.5
             },
-            new Pizza
+            new Item
             {
                 Name = "Watches",
                 Image = "watches.jpg",
                 Price = 199.5
             },
-            new Pizza
+            new Item
             {
                 Name = "Mobiles",
                 Image = "mobile.jpg",
                 Price = 999.45
             },
-             new Pizza
+             new Item
             {
                 Name = "Earpods",
                 Image = "ep.jpg",
                 Price = 295.1
             },
-            new Pizza
+            new Item
             {
                 Name = "Washing Machine",
                 Image = "whm.jpg",
                 Price = 652.5
             },
-            new Pizza
+            new Item
             {
                 Name = "Refrigirators",
                 Image = "fdg.png",
                 Price = 899.5
             },
-            new Pizza
+            new Item
             {
                 Name = "Sound Bars",
                 Image = "sb.jpg",
                 Price = 499.45
             }
         };
-        public IEnumerable<Pizza> GetallPizzas() => _pizzas;
-        public IEnumerable<Pizza> GetPopularPizzas(int count = 8) => _pizzas.OrderBy(p=> Guid.NewGuid())
+        public IEnumerable<Item> GetallPizzas() => _pizzas;
+        public IEnumerable<Item> GetPopularPizzas(int count = 8) => _pizzas.OrderBy(p=> Guid.NewGuid())
             .Take(count);
 
-        public IEnumerable<Pizza> SearchPizzas(string searchTerm) =>
+        public IEnumerable<Item> SearchPizzas(string searchTerm) =>
             string.IsNullOrWhiteSpace(searchTerm)
             ? _pizzas
             : _pizzas.Where(p => p.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
