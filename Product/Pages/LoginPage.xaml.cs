@@ -18,7 +18,8 @@ public partial class LoginPage : ContentPage
         password = ((Entry)this.FindByName("PasswordEntry")).Text;
         if (username == "Team" && password == "1111")
         {
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+           await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+          
         }
         else
         {
@@ -29,6 +30,7 @@ public partial class LoginPage : ContentPage
 
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new RegisterPage());
+       // Navigation.PushAsync(new RegisterPage());
+        Navigation.PushAsync(new PaymentSelectionPage());
     }
 }

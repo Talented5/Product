@@ -22,7 +22,7 @@
                Placeholder="Search for Products..."
                PlaceholderColor="Black"
                CancelButtonColor="Red"
-               TextColor="DarkGoldenrod"
+               TextColor="Black"
                SearchCommand="{Binding  SearchMobileCommand}"
                SearchCommandParameter="{Binding Source={x:Reference searchBar},Path=Text}"
                TextChanged="searchBar_TextChanged"/>

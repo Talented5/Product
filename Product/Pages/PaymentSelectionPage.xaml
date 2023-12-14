@@ -4,7 +4,7 @@
               xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
              x:Class="Product.Pages.PaymentSelectionPage"
              Title="PaymentSelectionPage"
-             BackgroundImageSource="bs.png">
+             BackgroundImageSource="op.png">
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="Back" >
             <MenuFlyoutItem Text="Back" Clicked="MenuFlyoutItem_Clicked"/>
@@ -13,28 +13,35 @@
 
 
     <Frame     VerticalOptions="Center"
-               HorizontalOptions="Center"
-               Margin="0,0,40,0">
-        <VerticalStackLayout >
-            <Label Text="Select the Paynemt Method:"
+               HorizontalOptions="Start"
+               HeightRequest="300"
+               WidthRequest="500"
+               Background="Transparent"
+               BorderColor="Transparent">
+        <VerticalStackLayout  >
+            <Label Text="Select the Payment Method:"
            HorizontalOptions="Center"
+                   TextColor="PowderBlue"
            FontAttributes="Bold"
-           Margin="0,0,200,0"
-           FontSize="Subtitle"/>
+                
+           Margin="0,0,0,0"
+           FontSize="Title"
+                   />
             <buttons:SfRadioButton Grid.Row="0" x:Name="sfButton"
-                  Text="PhonePay" WidthRequest="120" 
+                  Text="PhonePe"
+                    TextColor="WhiteSmoke" WidthRequest="120" FontSize="20"
                   HeightRequest="50"
                 StateChanged="sfButton_StateChanged"/>
             <buttons:SfRadioButton Grid.Row="1" x:Name="sfButton1"
-          Text="PayTM" WidthRequest="100" 
+          Text="PayTM" WidthRequest="120"  TextColor="WhiteSmoke"  FontSize="20"
           HeightRequest="50"
              StateChanged="sfButton_StateChanged"   />
             <buttons:SfRadioButton Grid.Row="2" x:Name="sfButton2"
-           Text="Gpay" WidthRequest="100" 
+           Text="Gpay" WidthRequest="120"  TextColor="WhiteSmoke"  FontSize="20"
            HeightRequest="50"
             StateChanged="sfButton_StateChanged"  />
             <buttons:SfRadioButton Grid.Row="3" x:Name="sfButton3"
-           Text="Cash On Delivery" WidthRequest="100" 
+           Text="Cash On Delivery" WidthRequest="120"  TextColor="WhiteSmoke"  FontSize="20"
            HeightRequest="50"
      StateChanged="sfButton3_StateChanged"
                                />
