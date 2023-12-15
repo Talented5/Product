@@ -101,8 +101,8 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
                 VerticalOptions="End"
                 HeightRequest="150"
                 WidthRequest="1240"
-                Padding="15"
-                StrokeShape="{OnPlatform Android='RoundReactangle 30,30,0,0', Default='RoundRectangle 0'}">
+                Padding="15">
+            <!--StrokeShape="{OnPlatform Android='RoundReactangle 30,30,0,0', Default='RoundRectangle 0'}">-->
             <Border.Shadow>
                 <Shadow Brush="LightBlue"
                         Radius="100"/>
